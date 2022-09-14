@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Task List 2021</title>
+	<title>What To Do</title>
 
 	<link rel="stylesheet" href="main.css" />
 </head>
@@ -21,17 +21,22 @@
 			<input 
 				type="submit"
 				id="new-task-submit" 
-				value="Add task" />
+				value="Add" />
 		</form>
 	</header>
 	<main>
-		<section class="task-list">
-			<h2>Stuff To Do</h2>
+		<section class="task-list" id="task-list">
+			<h2>To Do</h2>
 
 			<div id="tasks">
+					
+				 <div class="task">
 
-				 <!-- <div class="task">
-					<div class="content">
+					<div class="check">
+						<input type="checkbox" name="cb" id="cb"/>	 
+					</div>
+
+					 <div class="content">
 						<input 
 							type="text" 
 							class="text" 
@@ -42,7 +47,7 @@
 						<button class="edit">Edit</button>
 						<button class="delete">Delete</button>
 					</div>
-				</div> -->
+				</div>
 
 			</div>
 		</section>
@@ -51,3 +56,8 @@
 	<script src="main.js"></script>
 </body>
 </html>
+
+style="float: left; padding: 1rem;
+						margin-top: 0.5rem;
+						background-color: #6B7280; border-radius: .25rem;
+						display: block; cursor: pointer;"

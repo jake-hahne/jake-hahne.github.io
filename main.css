@@ -30,10 +30,11 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--gray);
     margin-bottom: 1rem;
 }
+
 #new-task-form {
     display: flex;
 }
@@ -102,6 +103,42 @@ main h2 {
     margin-bottom: 1rem;
 }
 
+input[type="checkbox"] {
+    padding: 1rem;
+    cursor: pointer;
+    appearance: none;
+    background-color: var(--gray);
+    margin: 0;
+    font: inherit;
+    width: 1em;
+    height: 1em;
+    border: .2em solid var(--dark);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]:hover {
+    border: 0.2em solid var(--pink);
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--blue);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+
 .task .content {
     flex: 1 1 0%;
 }
@@ -112,6 +149,8 @@ main h2 {
     width: 100%;
     display: block;
     transition: 0.4s;
+    padding-left: 1rem;
+    padding-top: 8px
 }
 
 .task .content .text:not(:read-only) {
