@@ -51,16 +51,25 @@ text-transform: Uppercase;
 margin-bottom: .5em;
 font-family: 'Rubik', sans-serif;
 font-size: 4rem;
-color: white; }
+ }
 
 h1 {
 position: relative;
 -webkit-background-clip: text; 
--webkit-text-fill-color: var(--gray)}
+-webkit-text-fill-color: var(--gray)
+}
 
 h1 {
-z-index: -3;
-text-shadow: 5px 3px 2px var(--darker);
+text-shadow: 5px 3px 10px var(--darkest);
+}
+
+h1 span {
+    color: var(--pink);
+    font-family: 'Rubik', sans-serif;
+    background-image: linear-gradient(to right, var(--pink), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
 }
         
 
