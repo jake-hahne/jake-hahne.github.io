@@ -28,23 +28,9 @@ body {
 }
 
 header {
-    max-width: 800px;
-    margin-left: 1rem;
+    max-width: 275px;
+    position: left;
 }
-
-/* header h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: var(--gray);
-    margin-bottom: 1rem;
-    margin: 0;
-    font-size: 4em;
-    margin-top: .75rem;
-    margin-bottom: 1.5rem;
-    display:flex;
-    color: whitesmoke;
-    text-shadow: 0 0 0.05em #fff, 0 0 0.2em var(--pink), 0 0 0.3em var(--pink);
-} */
 
 h1 {
 text-transform: Uppercase;
@@ -54,7 +40,7 @@ font-size: 4rem;
  }
 
 h1 {
-position: relative;
+position: left;
 -webkit-background-clip: text; 
 -webkit-text-fill-color: var(--gray)
 }
@@ -71,19 +57,33 @@ h1 span {
     -webkit-text-fill-color: transparent;
     text-shadow: none;
 }
-        
 
-#new-task-form {
-    display: flex;
-}
+        
 input, button {
     appearance: none;
     border: none;
     outline: none;
     background: none;
 }
+
+#entry {
+    margin: auto;
+}
+
+div#task-entry {
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+}
+
+#new-task-form {
+    display: flex;
+    margin: auto;
+
+}
+
 #new-task-input {
-    flex: 1 1 0%;
+    flex: auto;
     background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;
@@ -125,10 +125,11 @@ main {
 }
 
 main h2 {
+    margin: auto;
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--gray);
-    margin-left: auto;
+    margin: auto;
     margin-bottom: 1rem;
 }
 
@@ -139,6 +140,7 @@ main h2 {
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    margin: auto;
 }
 
 input[type="checkbox"] {
@@ -179,6 +181,7 @@ input[type="checkbox"]:checked::before {
 
 .task .content {
     flex: 1 1 0%;
+
 }
 
 .task .content .text {
