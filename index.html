@@ -5,33 +5,36 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>STUFF TO DO: To-Do List Made Easy</title>
-
 	<link rel="stylesheet" href="main.css" />
 </head>
 <body>
+
+	<nav class="nav">
+            <div class="logo">
+                <h1><span id="tick1">&#9745;</span> Stuff<br><span id="tick2">&#9745;</span> to<br><span id="tick3">&#9745;</span> Do</h1>
+            </div>
+
+			<div id="task-entry">
+				<form id="new-task-form">
+					<input 
+						type="text" 
+						name="new-task-input" 
+						id="new-task-input" 
+						placeholder="What needs done?" />
+					<input 
+						type="submit"
+						id="new-task-submit" 
+						value="Add" />
+				</form>
+			</div>
+
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+    </nav>
 	
-	<header>
-		<h1><span>></span> Stuff<br><span>></span> to<br><span>></span> Do</h1>
-	</header>
-
-	<section id="entry">
-
-		<div id="task-entry">
-			<form id="new-task-form">
-				<input 
-					type="text" 
-					name="new-task-input" 
-					id="new-task-input" 
-					placeholder="What needs done?" />
-				<input 
-					type="submit"
-					id="new-task-submit" 
-					value="Add" />
-			</form>
-		</div>
-
-	</section>
-
 	<main>
 
 		<section class="task-list" id="task-list">
