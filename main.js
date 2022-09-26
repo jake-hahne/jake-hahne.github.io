@@ -62,7 +62,6 @@ window.addEventListener('load', () => {
 			if (task_check.checked) {
 				task_input_el.style.setProperty("text-decoration", "line-through");
 				task_input_el.style.setProperty("color", "#6B7280");
-				list_el.append(task_el); // Move task to bottom of list when checked
 			}
 			if (task_check.checked == false) {
 				task_input_el.style.setProperty("text-decoration", "none")

@@ -18,7 +18,7 @@
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
     margin: 0;
     font-family: 'Fira sans', sans-serif;
 }
@@ -28,6 +28,7 @@ body {
     display: flex;
     margin-left: auto;
     min-height: 100vh;
+    min-width: 100vw;
     background: var(--dark);
     color: #FFF;
 }
@@ -47,42 +48,31 @@ body {
     width: auto;
     height: auto;
     padding-left: .25rem;
+    z-index: 1;
 }
 
-.nav div.main_list {
-    height: 65px;
-    float: right;
-}
-
-.nav div.main_list ul {
+ul.main_list {
+    position: fixed;
+    float: left;
+    margin-left: -6rem;
     width: 100%;
-    height: 65px;
-    display: flex;
+    height:auto;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: inline-flex;
 }
 
-.nav div.main_list ul li {
-    width: auto;
-    height: 65px;
-    margin: auto;
-    margin-right: 1rem;
-    margin-top: -3rem;
-}
-
-.nav div.main_list ul li a {
+ul.main_list li a {
+    z-index: 1;
     text-decoration: none;
     font-family: 'Fira-sans', sans-serif;
     color: var(--gray);
-    line-height: 65px;
     font-size: 1.5rem;
     font-weight: 300;
     transition: .5s;
 }
 
-.nav div.main_list ul li a:hover {
-    color: var(--pink);
+ul.main_list li a:hover {
+    color: orange;
     opacity: 0.9;
 }
 
@@ -139,24 +129,22 @@ input, button {
     background: none;
 }
 
-#entry {
-    margin-top: 200px;
-}
-
 div#task-entry {
+    z-index: 1;
     display: flex;
+    margin: auto;
     max-width: 500px;
 }
 
 #new-task-form {
     display: flex;
-    margin: 1rem 1rem;
+    margin: auto;
     margin-top: 1rem;
 
 }
 
 #new-task-input {
-    flex: auto;
+    flex: 1 1 0%;
     border-radius: 1rem;
     background-color: var(--dark);
     padding: 1rem;
@@ -167,12 +155,11 @@ div#task-entry {
     color: var(--gray);
 }
 #new-task-submit {
-    color: var(--pink);
     font-size: 1.5rem;
     font-weight: 700;
-    background-image: linear-gradient(to right, var(--pink), var(--blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    padding-left: .5rem;
+    color: orange;
+    text-shadow: 10px 10px 10px var(--darkest);
     cursor: pointer;
     transition: 0.4s;
 }
@@ -186,11 +173,11 @@ div#task-entry {
 }
 
 main {
-    flex: 1 1 0%;
-    padding: 2rem 1rem;
-    max-width: 800px;
-    padding-top: 100px;
-    margin: auto;
+    flex:auto;
+    max-width: 65%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .task-list {
@@ -198,12 +185,17 @@ main {
 }
 
 main h2 {
+    text-align: center;
+    padding-top: 0;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--lightgray);
+    text-decoration: underline orange 5px;
+    text-shadow: 10px 5px 10px var(--darkest);
     margin: auto;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--gray);
-    margin: auto;
-    margin-bottom: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 #tasks .task {
@@ -233,7 +225,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover {
-    border: 0.2em solid var(--pink);
+    border: 0.2em solid var(--blue);
 }
 
 input[type="checkbox"]::before {
@@ -242,7 +234,7 @@ input[type="checkbox"]::before {
     height: 1em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--blue);
+    box-shadow: inset 1em 1em orange;
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
@@ -261,7 +253,6 @@ input[type="checkbox"]:checked::before {
     color: var(--light);
     font-size: 1.125rem;
     width: 100%;
-    display: block;
     transition: 0.4s;
     padding-left: 1rem;
     padding-top: 8px
@@ -283,23 +274,24 @@ input[type="checkbox"]:checked::before {
     font-weight: 700;
     text-transform: uppercase;
     transition: 0.4s;
-}
-
-.task .actions button:hover {
-    opacity: 0.8;
-}
-
-.task .actions button:active {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .task .actions .edit {
-    background-image: linear-gradient(to right, var(--pink), var(--blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: orange;
+    text-shadow: 1px 1px 1px black;
+}
+
+.task .actions .edit:hover {
+    opacity: 1;
 }
 
 .task .actions .delete {
     color: crimson;
+    text-shadow: 1px 1px 1px black;
+}
+
+.task .actions .delete:hover {
+    opacity: 1;
 }
 
