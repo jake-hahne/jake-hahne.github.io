@@ -23,6 +23,13 @@
     font-family: 'Fira sans', sans-serif;
 }
 
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
 
 body {
     display: flex;
@@ -38,7 +45,6 @@ body {
     height: 90px;
     background-color: var(--darker);
     position: fixed;
-    line-height: 65px;
     text-align: left;
     z-index: 1;
 }
@@ -51,29 +57,110 @@ body {
     z-index: 1;
 }
 
-ul.main_list {
+.nav .menu-access {
+    display: flex;
+    margin: 0 auto;
+    float: right;
+    height: 10px;
+    min-width: 90px;
+    z-index: 4;
+}
+
+.nav label {
+    height: 90px;
+    width: 90px;
+    z-index: 5;
+}
+
+.nav .hamburger {
+    line-height: 20px;
+    margin-top: .75rem;
     position: fixed;
-    float: left;
-    margin-left: -6rem;
-    width: 100%;
-    height:auto;
+    top: 1px;
+    right: 20px;
+    z-index: 2;
+    width: 75px;
+    height: 75px;
+}
+
+.nav .hamburger .line {
+    display: inline-block;
+    height: 6px;
+    width: 65px;
+    border-radius: 6px;
+    background: var(--gray);
+  }
+  
+  .nav .hamburger .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav .hamburger .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav .hamburger .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+.nav .menu-items {
     list-style: none;
-    display: inline-flex;
-}
-
-ul.main_list li a {
+    background-image: linear-gradient(to bottom, var(--blue2), var(--blue));
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    transform: translateY(-1000px);
+    border-radius: 1rem;
+    flex-direction: column;
+    transition: transform 1s ease-in-out;
+    text-align: center;
+    opacity: .925;
     z-index: 1;
-    text-decoration: none;
-    font-family: 'Fira-sans', sans-serif;
-    color: var(--gray);
-    font-size: 1.5rem;
-    font-weight: 300;
-    transition: .5s;
 }
 
-ul.main_list li a:hover {
-    color: orange;
-    opacity: 0.9;
+
+.nav .menu-items li {
+    margin: auto;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.nav .menu-items li a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--light);
+    opacity: .95;
+}
+
+.nav .menu-access input#menu-check {
+    position: absolute;
+    display: block;
+    height: 75px;
+    width: 75px;
+    top: 10px;
+    right: 20px;
+    z-index: 5;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.nav .menu-access input#menu-check:checked~.menu-items {
+    transform: translateY(-90px);
+}
+
+.nav .menu-access input#menu-check:checked~.hamburger .line1 {
+    transform: rotate(40deg);
+}
+
+.nav .menu-access input#menu-check:checked~.hamburger .line2 {
+    transform: scale(0);
+}
+
+.nav .menu-access input#menu-check:checked~.hamburger .line3 {
+    transform: rotate(-40deg);
 }
 
 
@@ -121,14 +208,6 @@ text-shadow: 5px 3px 10px var(--darkest);
     text-shadow: none;
 }
 
-        
-input, button {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-}
-
 div#task-entry {
     z-index: 1;
     display: flex;
@@ -146,20 +225,21 @@ div#task-entry {
 #new-task-input {
     flex: 1 1 0%;
     border-radius: 1rem;
-    background-color: var(--dark);
+    background-color: var(--gray);
     padding: 1rem;
     color: var(--light);
     font-size: 1.5rem;
+    z-index: 0;
 }
 #new-task-input::placeholder {
-    color: var(--gray);
+    color: var(--dark);
 }
 #new-task-submit {
     font-size: 1.5rem;
     font-weight: 700;
     padding-left: .5rem;
     color: orange;
-    text-shadow: 10px 10px 10px var(--darkest);
+    text-shadow: 2px 2px 2px var(--darkest);
     cursor: pointer;
     transition: 0.4s;
 }
@@ -175,6 +255,7 @@ div#task-entry {
 main {
     flex:auto;
     max-width: 65%;
+    min-width: 450px;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -207,7 +288,7 @@ main h2 {
     margin: 1rem;
 }
 
-input[type="checkbox"] {
+.task input[type="checkbox"] {
     padding: 1rem;
     cursor: pointer;
     appearance: none;
@@ -224,11 +305,11 @@ input[type="checkbox"] {
     transition: 0.3s;
 }
 
-input[type="checkbox"]:hover {
+.task input[type="checkbox"]:hover {
     border: 0.2em solid var(--blue);
 }
 
-input[type="checkbox"]::before {
+.task input[type="checkbox"]::before {
     content: "";
     width: 1em;
     height: 1em;
@@ -239,7 +320,7 @@ input[type="checkbox"]::before {
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
-input[type="checkbox"]:checked::before {
+.task input[type="checkbox"]:checked::before {
     transform: scale(1);
 } 
 

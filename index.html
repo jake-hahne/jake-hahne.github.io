@@ -10,35 +10,47 @@
 <body>
 
 	<nav class="nav">
+
             <div class="logo">
                 <h1><span id="tick1">&#9745;</span> Stuff<br><span id="tick2">&#9745;</span> to<br><span id="tick3">&#9745;</span> Do</h1>
             </div>
 
-			<div id="task-entry">
-				<form id="new-task-form">
-					<input 
-						type="text" 
-						name="new-task-input" 
-						id="new-task-input" 
-						placeholder="What needs done?" />
-					<input 
-						type="submit"
-						id="new-task-submit" 
-						value="Add" />
-				</form>
+			<div class="menu-access">
+					<input id="menu-check" type="checkbox"/>
+					<div class="hamburger">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+					<div class="menu-items">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">about</a></li>
+						<li><a href="#">blogs</a></li>
+						<li><a href="#">portfolio</a></li>
+						<li><a href="#">contact</a></li>
+					</div>
 			</div>
-            
+
+			
+
     </nav>
 	
-	<div class="toolbar">
-		
-	</div>
-
 	<main>
 
-		<ul class="main_list">
-			<li><a href="#">About</a></li>
-		</ul>
+		<div id="task-entry">
+			<form id="new-task-form">
+				<input 
+					type="text" 
+					name="new-task-input" 
+					id="new-task-input" 
+					placeholder="What needs done?" />
+				<input 
+					type="submit"
+					id="new-task-submit" 
+					value="Add" />
+			</form>
+		</div>
+		
 
 		<section class="task-list" id="task-list">
 			<h2>Your Stuff</h2>
