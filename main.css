@@ -61,7 +61,7 @@ body {
     display: flex;
     margin: 0 auto;
     float: right;
-    height: 10px;
+    height: 1px;
     min-width: 90px;
     z-index: 4;
 }
@@ -107,16 +107,15 @@ body {
 
 .nav .menu-items {
     list-style: none;
-    background-image: linear-gradient(to bottom, var(--blue2), var(--blue));
+    background-image: linear-gradient(to bottom, var(--darkest), var(--dark));
     height: 75vh;
     width: 100vw;
     display: flex;
     transform: translateY(-1000px);
-    border-radius: 1rem;
     flex-direction: column;
-    transition: transform 1s ease-in-out;
+    transition: transform .75s ease-in-out;
     text-align: center;
-    opacity: .925;
+    opacity: .99;
     z-index: 1;
 }
 
@@ -131,8 +130,13 @@ body {
 .nav .menu-items li a {
     text-decoration: none;
     font-weight: 400;
-    color: var(--light);
+    color: var(--gray);
     opacity: .95;
+    transition: .3s ease-in-out;
+}
+
+.nav .menu-items li a:hover {
+    color: orange;
 }
 
 .nav .menu-access input#menu-check {
