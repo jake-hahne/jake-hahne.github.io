@@ -108,14 +108,14 @@ body {
 .nav .menu-items {
     list-style: none;
     background-image: linear-gradient(to bottom, var(--darkest), var(--dark));
-    height: 75vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     transform: translateY(-1000px);
     flex-direction: column;
-    transition: transform .75s ease-in-out;
+    transition: transform .6s ease-in-out;
     text-align: center;
-    opacity: .99;
+    opacity: .975;
     z-index: 1;
 }
 
@@ -172,13 +172,12 @@ h1 {
 text-transform: Uppercase;
 font-family: 'Rubik', sans-serif;
 font-size: 1.5rem;
+color: var(--lightgray);
 line-height: normal;
 }
 
 h1 {
 position: left;
--webkit-background-clip: text; 
--webkit-text-fill-color: var(--lightgray);
 }
 
 h1 {
@@ -186,29 +185,20 @@ text-shadow: 5px 3px 10px var(--darkest);
 }
 
 #tick1 {
-    color: none;
+    color: orange;
     font-family: 'Rubik', sans-serif;
-    background-image: linear-gradient(to right, var(--blue2), var(--green));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-shadow: none;
 }
 
 #tick2 {
-    color: none;
+    color: orange;
     font-family: 'Rubik', sans-serif;
-    background-image: linear-gradient(to right, var(--red), var(--yellow));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-shadow: none;
 }
 
 #tick3 {
-    color: none;
+    color: orange;
     font-family: 'Rubik', sans-serif;
-    background-image: linear-gradient(to right, var(--pink), var(--blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-shadow: none;
 }
 
@@ -274,10 +264,10 @@ main h2 {
     padding-top: 0;
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: var(--lightgray);
-    text-decoration: underline orange 5px;
-    text-shadow: 10px 5px 10px var(--darkest);
+    text-decoration: underline orange 10px;
+    text-shadow: 3px 3px 3px var(--darkest);
     margin: auto;
     margin-top: 4rem;
     margin-bottom: 3rem;
