@@ -185,13 +185,13 @@ text-shadow: 5px 3px 10px var(--darkest);
 }
 
 #tick1 {
-    color: orange;
+    color: var(--lightgray);
     font-family: 'Rubik', sans-serif;
     text-shadow: none;
 }
 
 #tick2 {
-    color: orange;
+    color: var(--lightgray);
     font-family: 'Rubik', sans-serif;
     text-shadow: none;
 }
