@@ -42,7 +42,7 @@ body {
 
 .nav {
     width: 100%;
-    height: 90px;
+    height: 105px;
     background-color: var(--darker);
     position: fixed;
     text-align: left;
@@ -74,7 +74,7 @@ body {
 
 .nav .hamburger {
     line-height: 20px;
-    margin-top: .75rem;
+    margin-top: 1.25rem;
     position: fixed;
     top: 1px;
     right: 20px;
@@ -108,7 +108,7 @@ body {
 .nav .menu-items {
     list-style: none;
     background-image: linear-gradient(to bottom, var(--darkest), var(--dark));
-    height: 100vh;
+    height: 75vh;
     width: 100vw;
     display: flex;
     transform: translateY(-1000px);
@@ -130,13 +130,25 @@ body {
 .nav .menu-items li a {
     text-decoration: none;
     font-weight: 400;
-    color: var(--gray);
+    color: var(--lightgray);
+    opacity: .95;
+    transition: .3s ease-in-out;
+}
+
+.nav .menu-items li #sign-out {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--lightgray);
     opacity: .95;
     transition: .3s ease-in-out;
 }
 
 .nav .menu-items li a:hover {
     color: orange;
+}
+
+.nav .menu-items li #sign-out:hover {
+    color: crimson;
 }
 
 .nav .menu-access input#menu-check {
@@ -171,35 +183,61 @@ body {
 h1 {
 text-transform: Uppercase;
 font-family: 'Rubik', sans-serif;
-font-size: 1.5rem;
-color: var(--lightgray);
-line-height: normal;
-}
-
-h1 {
+font-size: 1.4rem;
+color: var(--light);
+line-height: 2rem;
 position: left;
-}
-
-h1 {
+margin-top: 3px;
 text-shadow: 5px 3px 10px var(--darkest);
 }
 
+#logobox {
+    width: 400px;
+    margin: auto;
+}
+
+#logo {
+    line-height: 7rem;
+    font-size: 5rem;
+}
+
+#logotick1 {
+    color: var(--gray);
+    border: 4px solid var(--gray);
+}
+
+#logotick2 {
+    color: var(--gray);
+    border: 4px solid var(--gray);
+}
+
+#logotick3 {
+    color: orange;
+    border: 4px solid var(--gray);
+}
+
 #tick1 {
-    color: var(--lightgray);
+    color: var(--gray);
     font-family: 'Rubik', sans-serif;
     text-shadow: none;
+    border: 2px solid var(--gray);
+    font-size: 1.3rem;
 }
 
 #tick2 {
-    color: var(--lightgray);
+    color: var(--gray);
     font-family: 'Rubik', sans-serif;
     text-shadow: none;
+    border: 2px solid var(--gray);
+    font-size: 1.3rem;
 }
 
 #tick3 {
     color: orange;
     font-family: 'Rubik', sans-serif;
     text-shadow: none;
+    border: 2px solid var(--gray);
+    font-size: 1.3rem;
 }
 
 div#task-entry {
@@ -233,7 +271,7 @@ div#task-entry {
     font-weight: 700;
     padding-left: .5rem;
     color: orange;
-    text-shadow: 2px 2px 2px var(--darkest);
+    text-shadow: 1px 1px 1px var(--darkest);
     cursor: pointer;
     transition: 0.4s;
 }
@@ -265,8 +303,8 @@ main h2 {
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     font-size: 3.5rem;
-    color: var(--lightgray);
-    text-decoration: underline orange 10px;
+    color: var(--light);
+    border-bottom: 5px solid orange;
     text-shadow: 3px 3px 3px var(--darkest);
     margin: auto;
     margin-top: 4rem;
