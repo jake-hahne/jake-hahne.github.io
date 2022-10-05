@@ -241,9 +241,11 @@ text-shadow: 5px 3px 10px var(--darkest);
 }
 
 div#task-entry {
-    z-index: 1;
+    z-index: 3;
+    position: fixed;
     display: flex;
     margin: auto;
+    margin-top: 1rem;
     max-width: 500px;
 }
 
@@ -255,22 +257,25 @@ div#task-entry {
 }
 
 #new-task-input {
-    flex: 1 1 0%;
+    display: flex;
     border-radius: 1rem;
-    background-color: var(--gray);
+    background-color: var(--darker);
+    opacity: .975;
+    width: 50vw;
+    min-width: 300px;
     padding: 1rem;
     color: var(--light);
     font-size: 1.5rem;
-    z-index: 0;
 }
+
 #new-task-input::placeholder {
-    color: var(--dark);
+    color: var(--lightgray);
 }
 #new-task-submit {
     font-size: 1.5rem;
     font-weight: 700;
     padding-left: .5rem;
-    color: orange;
+    color: var(--blue);
     text-shadow: 1px 1px 1px var(--darkest);
     cursor: pointer;
     transition: 0.4s;
@@ -307,7 +312,7 @@ main h2 {
     border-bottom: 5px solid orange;
     text-shadow: 3px 3px 3px var(--darkest);
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 10rem;
     margin-bottom: 3rem;
 }
 
