@@ -1,0 +1,43 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --lightgray: #b8bbbf;
+    --bluegray: #657686;
+    --light: #eee;
+    --blue: #0df8fc;
+    --pink: #f80dfc;
+    --green: #85f702;
+    --blue2: #3798fa;
+    --red: #fa0702;
+    --yellow: #fae102;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+#logobox {
+    display: flexbox;
+    justify-content: center;
+    width: 300px;
+    z-index: 0;
+}
+
+#start {
+    width: 300px;
+    font-size: 32px;
+    margin-left: 2.5rem;
+    text-decoration: none;
+    color: var(--lightgray);
+    transition: .4s ease-in-out;
+    text-align: center;
+}
+
+#start:hover {
+    color: orange;
+}
+

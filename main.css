@@ -144,7 +144,7 @@ body {
 }
 
 .nav .menu-items li a:hover {
-    color: orange;
+    color: #ffa500;
 }
 
 .nav .menu-items li #sign-out:hover {
