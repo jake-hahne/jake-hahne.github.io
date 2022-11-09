@@ -1,25 +1,28 @@
+
 :root {
+    /*Start of palette*/
+    --bluebase: #112B3C;
+    --blue2: #205375;
+    --orange: #F66B0E;
+    --brightorange: #FFA500FF;
+    --ice: #EFEFEF;
+    /*End of palette*/
+
+    /*Secondary Colors*/
     --dark: #374151;
     --darker: #1F2937;
     --darkest: #111827;
     --gray: #6B7280;
-    --lightgray: #ababac;
-    --bluegray: #657686;
+    --lightgray: #b8bbbf;
     --light: #eee;
     --blue: #0df8fc;
-    --pink: #f80dfc;
-    --green: #85f702;
-    --blue2: #3798fa;
     --red: #fa0702;
-    --yellow: #fae102;
-    --orange: #FFA500FF;
-    --redorange: #FA7621;
 }
 
 
 body {
-    background-image: url("resources/index-backdrop.jpg");
-    background-color: var(--darkest);
+    background-image: linear-gradient(to bottom, var(--darkest), var(--blue2));
+    background-color: var(--bluebase);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -33,26 +36,28 @@ body {
 #logo-box {
     margin-top: auto;
     margin-bottom: auto;
+    border: 1px solid var(--blue2);
+    box-shadow: 0 7px 15px var(--bluebase);
     border-radius: 2rem;
     display: flex;
     height: 500px;
     width: 400px;
-    background: var(--darkest);
+    background: var(--bluebase);
     flex-direction: column;
     z-index: 0;
 }
 
 #start {
     width: 250px;
-    font-size: 22px;
-    font-family: 'Rubik', sans-serif;
+    font-size: 26px;
+    font-family: 'Alumni Sans', sans-serif;
     line-height: 3rem;
     text-decoration: none;
     border-radius: .25em;
-    color: white;
-    background-image: linear-gradient(to bottom, var(--gray), var(--dark));
+    color: var(--ice);
+    border: 1px solid var(--blue2);
     box-shadow: black;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -64,6 +69,6 @@ body {
 }
 
 #start:hover {
-    color: darkorange;
+    background: var(--blue2);
 }
 

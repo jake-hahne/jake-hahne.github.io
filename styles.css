@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
 
 :root {
+    /*Start of palette*/
+    --bluebase: #112B3C;
+    --blue2: #205375;
+    --orange: #F66B0E;
+    --ice: #EFEFEF;
+    /*End of palette*/
+
     --dark: #374151;
     --darker: #1F2937;
     --darkest: #111827;
@@ -10,17 +17,13 @@
     --lightgray: #b8bbbf;
     --light: #eee;
     --blue: #0df8fc;
-    --pink: #f80dfc;
-    --green: #85f702;
-    --blue2: #3798fa;
     --red: #fa0702;
-    --yellow: #fae102;
 }
 
 * {
     box-sizing:border-box;
     margin: 0;
-    font-family: 'Fira sans', sans-serif;
+    font-family: 'Alumni Sans', sans-serif;
 }
 
 input, button {
@@ -36,14 +39,14 @@ body {
     margin-left: auto;
     min-height: 100vh;
     min-width: 100vw;
-    background: var(--dark);
-    color: #FFF;
+    background-image: linear-gradient(to bottom, var(--bluebase), var(--blue2));
+    /*background-color: var(--bluebase);*/
 }
 
 .nav {
     width: 100%;
     height: 105px;
-    background-color: var(--darker);
+    background-image: linear-gradient(to bottom, var(--bluebase), var(--darkest));
     position: fixed;
     text-align: left;
     z-index: 4;
@@ -107,7 +110,9 @@ body {
 
 .nav .menu-items {
     list-style: none;
-    background-image: linear-gradient(to bottom, var(--darkest), var(--dark));
+    background-image: linear-gradient(to bottom, var(--bluebase), var(--blue2));
+    box-shadow: 0 20px 20px var(--darkest);
+    border-radius: 1rem;
     height: 90vh;
     width: 100vw;
     display: flex;
@@ -139,7 +144,7 @@ body {
 }
 
 .nav .menu-items a:hover {
-    color: #ffa500;
+    color: var(--orange);
 }
 
 .nav .menu-items #sign-out:hover {
@@ -196,7 +201,7 @@ div#task-entry {
 #new-task-input {
     display: flex;
     border-radius: 1rem;
-    border: 2px solid orange;
+    border: 2px solid var(--orange);
     background-color: var(--darker);
     opacity: .945;
     width: 50vw;
@@ -212,6 +217,7 @@ div#task-entry {
 #new-task-submit {
     font-size: 1.5rem;
     font-weight: 700;
+    text-transform: uppercase;
     padding-left: .5rem;
     color: #868686;
     text-shadow: 1px 1px 1px var(--darkest);
@@ -247,11 +253,9 @@ main h2 {
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     font-size: 3.5rem;
-    color: var(--light);
+    color: var(--ice);
     text-shadow: 3px 3px 3px var(--darkest);
-    margin: auto;
-    margin-top: 10rem;
-    margin-bottom: 3rem;
+    margin: 10rem auto 3rem;
 }
 
 #tasks .task {
@@ -290,7 +294,7 @@ main h2 {
     height: 1em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em orange;
+    box-shadow: inset 1em 1em var(--orange);
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
@@ -301,8 +305,7 @@ main h2 {
 
 
 .task .content {
-    flex: 1 1 0%;
-
+    flex: 1 1 0;
 }
 
 .task .content .text {
@@ -334,7 +337,7 @@ main h2 {
 }
 
 .task .actions .edit {
-    color: orange;
+    color: var(--orange);
     text-shadow: 1px 1px 1px black;
 }
 
