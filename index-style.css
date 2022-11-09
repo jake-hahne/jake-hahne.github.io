@@ -12,32 +12,58 @@
     --blue2: #3798fa;
     --red: #fa0702;
     --yellow: #fae102;
+    --orange: #FFA500FF;
+    --redorange: #FA7621;
 }
 
+
 body {
+    background-image: url("resources/index-backdrop.jpg");
+    background-color: var(--darkest);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
+    height: 100vh;
+    width: 100vw;
     flex-direction: row;
     justify-content: center;
 }
 
 
 #logo-box {
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 2rem;
     display: flex;
+    height: 500px;
+    width: 400px;
+    background: var(--darkest);
     flex-direction: column;
-    width: 300px;
     z-index: 0;
 }
 
 #start {
-    width: 300px;
-    font-size: 32px;
+    width: 250px;
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 3rem;
     text-decoration: none;
-    color: var(--lightgray);
-    transition: .4s ease-in-out;
+    border-radius: .25em;
+    color: white;
+    background-image: linear-gradient(to bottom, var(--gray), var(--dark));
+    box-shadow: black;
+    transition: .3s ease-in-out;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #start:hover {
-    color: orange;
+    color: darkorange;
 }
 
