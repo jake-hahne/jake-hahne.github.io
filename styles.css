@@ -250,11 +250,11 @@ main {
 main h2 {
     text-align: center;
     padding-top: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Avenir Next", sans-serif;
     text-transform: uppercase;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--ice);
-    text-shadow: 3px 3px 3px var(--darkest);
+    text-shadow: 2px 2px 1px var(--bluebase);
     margin: 10rem auto 3rem;
 }
 
