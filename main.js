@@ -13,10 +13,10 @@ window.addEventListener('load', () => {
 	 page load, therefore when list items are made, they will not be lost on refresh or even quitting the browser. They
 	 will only be removed from local storage when they are explicitly deleted by the user.
 	 *****************************************************************************************************************/
-	var arrayOfTodos = Object.keys(localStorage);
-	for (var i = 0; i < arrayOfTodos.length; i++){
+	const arrayOfTodos = Object.keys(localStorage);
+	for (let i = 0; i < arrayOfTodos.length; i++){
 
-		//--------------------- Container for a 'task' --------------------------------//
+		//--------------------- Container for a 'task' ------------------------//
 		const task_el = document.createElement('div');
 		task_el.classList.add('task');
 
@@ -67,7 +67,7 @@ window.addEventListener('load', () => {
 				task_input_el.style.setProperty("text-decoration", "line-through");
 				task_input_el.style.setProperty("color", "#6B7280");
 			}
-			if (task_check.checked == false) {
+			if (task_check.checked === false) {
 				task_input_el.style.setProperty("text-decoration", "none")
 				task_input_el.style.setProperty("color", "#EEE");
 			}
@@ -76,7 +76,7 @@ window.addEventListener('load', () => {
 		//------------------- Event for edit button functionality------------------//
 	
 		task_edit_el.addEventListener('click', (e) => {
-			if (task_edit_el.innerText.toLowerCase() == "edit") {
+			if (task_edit_el.innerText.toLowerCase() === "edit") {
 				task_edit_el.innerText = "Save";
 				task_input_el.removeAttribute("readonly");
 				task_input_el.focus();
@@ -168,7 +168,7 @@ to reload all previously created tasks aside from the tasks that have been expli
 				task_input_el.style.setProperty("text-decoration", "line-through");
 				task_input_el.style.setProperty("color", "#6B7280");
 			}
-			if (task_check.checked == false) {
+			if (task_check.checked === false) {
 				task_input_el.style.setProperty("text-decoration", "none")
 				task_input_el.style.setProperty("color", "#EEE");
 			}
@@ -177,7 +177,7 @@ to reload all previously created tasks aside from the tasks that have been expli
 		//------------------- Event for edit button functionality------------------//
 
 		task_edit_el.addEventListener('click', (e) => {
-			if (task_edit_el.innerText.toLowerCase() == "edit") {
+			if (task_edit_el.innerText.toLowerCase() === "edit") {
 				task_edit_el.innerText = "Save";
 				task_input_el.removeAttribute("readonly");
 				task_input_el.focus();
