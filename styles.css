@@ -8,6 +8,7 @@
     --blue2: #205375;
     --orange: #F66B0E;
     --ice: #EFEFEF;
+    --brightorange: #FFA500FF;
     /*End of palette*/
 
     --dark: #374151;
@@ -179,30 +180,24 @@ body {
     transform: rotate(-40deg);
 }
 
-#logo {
-    line-height: 7rem;
-    font-size: 5rem;
-}
-
 div#task-entry {
     z-index: 2;
     position: fixed;
     display: flex;
-    margin: 1rem auto auto;
+    margin: .5rem auto auto 4.5vw;
     max-width: 500px;
 }
 
 #new-task-form {
     display: flex;
-    margin: 1rem auto auto;
-
+    margin: 1.5rem auto auto;
 }
 
 #new-task-input {
     display: flex;
     border-radius: 1rem;
-    border: 2px solid var(--orange);
-    background-color: var(--darker);
+    border: 1px solid var(--brightorange);
+    background-color: var(--bluebase);
     opacity: .945;
     width: 50vw;
     min-width: 300px;
@@ -235,8 +230,8 @@ div#task-entry {
 }
 
 main {
-    flex:auto;
-    max-width: 65%;
+    flex: auto;
+    max-width: 60vw;
     min-width: 450px;
     margin-top: 100px;
     margin-left: auto;
@@ -255,13 +250,21 @@ main h2 {
     font-size: 3rem;
     color: var(--ice);
     text-shadow: 2px 2px 1px var(--bluebase);
-    margin: 10rem auto 3rem;
+    margin: 8rem auto 1.5rem;
+}
+
+#tasks {
+    padding: 1rem;
+    background: var(--bluebase);
+    border: 1px solid var(--orange);
+    box-shadow: 0 10px 10px var(--bluebase);
+    border-radius: 1rem;
 }
 
 #tasks .task {
     display: flex;
-    justify-content: space-between;
-    background-color: var(--darkest);
+    justify-content: space-around;
+    background-color: var(--bluebase);
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem;
