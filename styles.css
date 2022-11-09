@@ -48,6 +48,10 @@ body {
     width: 100%;
     height: 105px;
     background-image: linear-gradient(to bottom, var(--bluebase), var(--darkest));
+    border-bottom-left-radius: .75em;
+    border-bottom-right-radius: .75em;
+    border-bottom: 1px solid var(--bluebase);
+    box-shadow: 5px 10px 20px var(--darkest);
     position: fixed;
     text-align: left;
     z-index: 4;
@@ -111,10 +115,11 @@ body {
 
 .nav .menu-items {
     list-style: none;
-    background-image: linear-gradient(to bottom, var(--blue2), var(--bluebase));
+    background-image: linear-gradient(to bottom, var(--bluebase), var(--darkest));
     box-shadow: 0 10px 20px var(--bluebase);
     border-radius: 1rem;
-    height: 90vh;
+    border-bottom: 2px solid var(--orange);
+    height: 85vh;
     width: 100vw;
     display: flex;
     margin-top: -2rem;
@@ -198,6 +203,7 @@ div#task-entry {
     border-radius: 1rem;
     border: 1px solid var(--brightorange);
     background-color: var(--bluebase);
+    box-shadow: 5px 10px 20px var(--bluebase);
     opacity: .945;
     width: 50vw;
     min-width: 300px;
@@ -214,15 +220,13 @@ div#task-entry {
     font-weight: 700;
     text-transform: uppercase;
     padding-left: .5rem;
-    color: #868686;
-    text-shadow: 1px 1px 1px var(--darkest);
+    color: var(--brightorange);
     cursor: pointer;
     transition: 0.4s;
 }
 
 #new-task-submit:hover {
-    color: white;
-    opacity: 0.8;
+    color: var(--ice);
 }
 
 #new-task-submit:active{
@@ -257,7 +261,7 @@ main h2 {
     padding: 1rem;
     background: var(--bluebase);
     border: 1px solid var(--orange);
-    box-shadow: 0 10px 10px var(--bluebase);
+    box-shadow: 5px 10px 30px var(--bluebase);
     border-radius: 1rem;
 }
 
