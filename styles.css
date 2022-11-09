@@ -40,7 +40,7 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     background-image: linear-gradient(to bottom, var(--bluebase), var(--blue2));
-    /*background-color: var(--bluebase);*/
+    background-color: var(--bluebase);
 }
 
 .nav {
@@ -110,8 +110,8 @@ body {
 
 .nav .menu-items {
     list-style: none;
-    background-image: linear-gradient(to bottom, var(--bluebase), var(--blue2));
-    box-shadow: 0 20px 20px var(--darkest);
+    background-image: linear-gradient(to bottom, var(--blue2), var(--bluebase));
+    box-shadow: 0 10px 20px var(--bluebase);
     border-radius: 1rem;
     height: 90vh;
     width: 100vw;
@@ -121,7 +121,7 @@ body {
     flex-direction: column;
     transition: transform .6s ease-in-out;
     text-align: center;
-    opacity: .975;
+    opacity: .985;
     z-index: 3;
 }
 
