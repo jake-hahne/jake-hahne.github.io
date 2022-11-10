@@ -7,6 +7,8 @@ window.addEventListener('load', () => {
 	const form = document.querySelector("#new-task-form");
 	const input = document.querySelector("#new-task-input");
 	const list_el = document.querySelector("#tasks");
+	const arrayOfTodos = Object.keys(localStorage);
+	let emptyMessage = null;
 
 	/****************************************************************************************************************
 	 This section of the script has the purpose of loading all list items by looping through the browsers local storage
@@ -14,10 +16,10 @@ window.addEventListener('load', () => {
 	 page load, therefore when list items are made, they will not be lost on refresh or even quitting the browser. They
 	 will only be removed from local storage when they are explicitly deleted by the user.
 	 *****************************************************************************************************************/
-	const arrayOfTodos = Object.keys(localStorage);
-	const emptyMessage = "Would you look at that, you have nothing to do!";
+
 
 	if (localStorage.length > 0) {
+
 		for (let i = 0; i < arrayOfTodos.length; i++) {
 
 			//--------------------- Container for a 'task' ------------------------//
@@ -98,23 +100,26 @@ window.addEventListener('load', () => {
 			});
 		}
 	}
+
+	//----------------Creates the message if a users task list is empty---------------//
 	if (!(localStorage > 0)) {
-		const task_el = document.createElement('div');
-		task_el.classList.add('task');
+		emptyMessage = document.createElement('div');
+		emptyMessage.classList.add('task');
 
-		const task_content_el = document.createElement('div');
-		task_content_el.classList.add('content');
+		const emptyMessageContent = document.createElement('div');
+		emptyMessageContent.classList.add('content');
 
-		task_el.appendChild(task_content_el);
+		emptyMessage.appendChild(emptyMessageContent);
 
-		const task_input_el = document.createElement('input');
-		task_input_el.classList.add('text');
-		task_input_el.type = 'text';
-		task_input_el.value = "Would you look at that, you have nothing to do!";
-		task_input_el.setAttribute('readonly', 'readonly');
+		const emptyMessageText = document.createElement('input');
+		emptyMessageText.classList.add('text');
+		emptyMessageText.type = 'text';
+		emptyMessageText.value = "Would you look at that, you have nothing to do!";
+		emptyMessageText.style.fontSize = "28px";
+		emptyMessageText.setAttribute('readonly', 'readonly');
 
-		task_content_el.appendChild(task_input_el);
-		list_el.appendChild(task_el);
+		emptyMessageContent.appendChild(emptyMessageText);
+		list_el.appendChild(emptyMessage);
 	}
 /**********************************************************************************************************************/
 
@@ -133,6 +138,10 @@ to reload all previously created tasks aside from the tasks that have been expli
 		e.preventDefault();
 
 		const task = input.value;
+
+		if (localStorage.length < 1){
+			list_el.removeChild(emptyMessage);
+		}
 
 		//--------------------- Container for a 'task' --------------------------------//
 		const task_el = document.createElement('div');
