@@ -40,7 +40,6 @@ body {
     margin-left: auto;
     min-height: 100vh;
     min-width: 100vw;
-    background-image: linear-gradient(to bottom, var(--bluebase), var(--blue2));
     background-color: var(--bluebase);
 }
 
@@ -118,7 +117,9 @@ body {
     background-image: linear-gradient(to bottom, var(--bluebase), var(--darkest));
     box-shadow: 0 10px 20px var(--bluebase);
     border-radius: 1rem;
-    border-bottom: 2px solid var(--orange);
+    border-bottom: 1px solid var(--orange);
+    border-left: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
     height: 85vh;
     width: 100vw;
     display: flex;
@@ -254,13 +255,12 @@ main h2 {
     font-size: 3rem;
     color: var(--ice);
     text-shadow: 2px 2px 1px var(--bluebase);
-    margin: 8rem auto 1.5rem;
+    margin: 10rem auto 0;
 }
 
 #tasks {
     padding: 1rem;
     background: var(--bluebase);
-    border: 1px solid var(--orange);
     box-shadow: 5px 10px 30px var(--bluebase);
     border-radius: 1rem;
 }
@@ -269,6 +269,7 @@ main h2 {
     display: flex;
     justify-content: space-around;
     background-color: var(--bluebase);
+    border: 1px solid var(--blue2);
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem;
@@ -278,11 +279,11 @@ main h2 {
     padding: 1rem;
     cursor: pointer;
     appearance: none;
-    background-color: var(--gray);
+    background-color: var(--bluebase);
     margin: 0;
     width: 1em;
     height: 1em;
-    border: .2em solid var(--dark);
+    border: .2em solid #1561ab;
     border-radius: 0.15em;
     transform: translateY(-0.075em);
     display: grid;
@@ -310,14 +311,13 @@ main h2 {
     transform: scale(1);
 } 
 
-
 .task .content {
     flex: 1 1 0;
 }
 
 .task .content .text {
-    color: var(--light);
-    font-size: 1.125rem;
+    color: var(--ice);
+    font-size: 1.25rem;
     width: 100%;
     transition: 0.4s;
     padding-left: 1rem;

@@ -1,0 +1,16 @@
+.motivation {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote-box {
+    width: 100%;
+    height: 50%;
+    border: 1px solid var(--orange);
+    border-radius: 1rem;
+    padding: 2rem;
+}

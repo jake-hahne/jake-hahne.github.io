@@ -17,7 +17,6 @@ window.addEventListener('load', () => {
 	 will only be removed from local storage when they are explicitly deleted by the user.
 	 *****************************************************************************************************************/
 
-
 	if (localStorage.length > 0) {
 
 		for (let i = 0; i < arrayOfTodos.length; i++) {
@@ -97,11 +96,13 @@ window.addEventListener('load', () => {
 			task_delete_el.addEventListener('click', (e) => {
 				list_el.removeChild(task_el);
 				localStorage.removeItem(task_input_el.value);
+				location.reload();
 			});
 		}
 	}
 
 	//----------------Creates the message if a users task list is empty---------------//
+
 	if (!(localStorage > 0)) {
 		emptyMessage = document.createElement('div');
 		emptyMessage.classList.add('task');
@@ -114,15 +115,22 @@ window.addEventListener('load', () => {
 		const emptyMessageText = document.createElement('input');
 		emptyMessageText.classList.add('text');
 		emptyMessageText.type = 'text';
-		emptyMessageText.value = "Would you look at that, you have nothing to do!";
-		emptyMessageText.style.fontSize = "28px";
+		emptyMessageText.value = "Nothing left, enjoy your free time!   😎🎉";
+		emptyMessageText.style.fontSize = "26px";
+		emptyMessageText.style.color = "var(--orange)";
+		emptyMessageText.style.textAlign = "center";
 		emptyMessageText.setAttribute('readonly', 'readonly');
 
 		emptyMessageContent.appendChild(emptyMessageText);
 		list_el.appendChild(emptyMessage);
 	}
-/**********************************************************************************************************************/
 
+	// If local storage is not empty, remove the empty message.
+	if (localStorage.length > 0){
+		list_el.removeChild(emptyMessage);
+	}
+
+/**********************************************************************************************************************/
 
 
 
@@ -137,11 +145,8 @@ to reload all previously created tasks aside from the tasks that have been expli
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 
+		location.reload();
 		const task = input.value;
-
-		if (localStorage.length < 1){
-			list_el.removeChild(emptyMessage);
-		}
 
 		//--------------------- Container for a 'task' --------------------------------//
 		const task_el = document.createElement('div');
