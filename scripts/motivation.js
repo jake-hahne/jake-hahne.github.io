@@ -101,6 +101,12 @@ document.addEventListener('DOMContentLoaded', function(){
         generateQuote();
     };
 
+    const newQuoteButton = document.getElementById("new-quote-button")
+
+    newQuoteButton.onclick = function () {
+        generateQuote();
+    }
+
 });
 
 
