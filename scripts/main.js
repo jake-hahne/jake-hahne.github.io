@@ -115,7 +115,7 @@ window.addEventListener('load', () => {
 		const emptyMessageText = document.createElement('input');
 		emptyMessageText.classList.add('text');
 		emptyMessageText.type = 'text';
-		emptyMessageText.value = "Nothing left, enjoy your free time!   😎🎉";
+		emptyMessageText.value = "Nothing left, enjoy your free time! 😎";
 		emptyMessageText.style.fontSize = "26px";
 		emptyMessageText.style.color = "var(--orange)";
 		emptyMessageText.style.textAlign = "center";

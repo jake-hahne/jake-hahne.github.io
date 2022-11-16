@@ -21,7 +21,7 @@
 
 
 body {
-    background-image: linear-gradient(to bottom, var(--darkest), var(--blue2));
+    background-image: linear-gradient(to bottom, var(--darkest), var(--bluebase), var(--blue2));
     background-color: var(--bluebase);
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,8 +36,8 @@ body {
 #logo-box {
     margin-top: auto;
     margin-bottom: auto;
-    border: 1px solid var(--blue2);
-    box-shadow: 0 7px 15px var(--bluebase);
+    border: 1px solid var(--brightorange);
+    box-shadow: 7px 10px 20px var(--darkest);
     border-radius: 2rem;
     display: flex;
     height: 500px;
