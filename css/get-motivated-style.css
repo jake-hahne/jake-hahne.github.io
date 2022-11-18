@@ -37,6 +37,9 @@
     padding: .5rem 1.5rem .5rem 1.5rem;
     color: var(--ice);
     transition: .3s ease-in-out;
+    position: fixed;
+    margin-top: 12rem;
+    cursor: pointer;
 }
 
 #new-quote-button:hover {

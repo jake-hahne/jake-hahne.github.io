@@ -97,7 +97,7 @@ body {
     border-radius: 6px;
     background: var(--gray);
   }
-  
+
   .nav .hamburger .line1 {
     transform-origin: 0% 0%;
     transition: transform 0.4s ease-in-out;
@@ -176,14 +176,17 @@ body {
 
 .nav .menu-access input#menu-check:checked~.hamburger .line1 {
     transform: rotate(40deg);
+    background: var(--orange);
 }
 
 .nav .menu-access input#menu-check:checked~.hamburger .line2 {
     transform: scale(0);
+    background: var(--orange);
 }
 
 .nav .menu-access input#menu-check:checked~.hamburger .line3 {
     transform: rotate(-40deg);
+    background: var(--orange);
 }
 
 div#task-entry {
@@ -204,7 +207,7 @@ div#task-entry {
     border-radius: 1rem;
     border: 1px solid var(--brightorange);
     background-color: var(--bluebase);
-    box-shadow: 5px 10px 20px var(--bluebase);
+    box-shadow: 2px 5px 10px var(--darkest);
     opacity: .945;
     width: 50vw;
     min-width: 300px;
@@ -261,7 +264,6 @@ main h2 {
 #tasks {
     padding: 1rem;
     background: var(--bluebase);
-    box-shadow: 5px 10px 30px var(--bluebase);
     border-radius: 1rem;
 }
 
@@ -270,6 +272,7 @@ main h2 {
     justify-content: space-around;
     background-color: var(--bluebase);
     border: 1px solid var(--blue2);
+    box-shadow: 5px 5px 10px var(--darkest);
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem;
