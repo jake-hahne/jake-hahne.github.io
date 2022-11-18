@@ -2,7 +2,9 @@
  * Written by Jake Hahne for Web Dev semester project at UNK
  * Fall 2022
  */
-
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
 window.addEventListener('load', () => {
 	const form = document.querySelector("#new-task-form");
 	const input = document.querySelector("#new-task-input");
@@ -94,9 +96,13 @@ window.addEventListener('load', () => {
 			//--------------------- Event for delete button-------------------------------//
 
 			task_delete_el.addEventListener('click', (e) => {
-				list_el.removeChild(task_el);
-				localStorage.removeItem(task_input_el.value);
-				location.reload();
+				task_el.classList.add("removed");
+				sleep(700).then(() => {
+					list_el.removeChild(task_el);
+					localStorage.removeItem(task_input_el.value);
+					location.reload();
+				});
+
 			});
 		}
 	}
@@ -115,7 +121,7 @@ window.addEventListener('load', () => {
 		const emptyMessageText = document.createElement('input');
 		emptyMessageText.classList.add('text');
 		emptyMessageText.type = 'text';
-		emptyMessageText.value = "Nothing left, enjoy your free time!   😎🎉";
+		emptyMessageText.value = "Nothing left, enjoy your free time! 😎";
 		emptyMessageText.style.fontSize = "26px";
 		emptyMessageText.style.color = "var(--orange)";
 		emptyMessageText.style.textAlign = "center";
@@ -195,40 +201,6 @@ to reload all previously created tasks aside from the tasks that have been expli
 	
 		list_el.appendChild(task_el);
 
-
 		input.value = '';
-
-		//--------------- Event when task is checked off task list -----------------------//
-		
-		task_check.addEventListener('click', (e) => {
-			if (task_check.checked) {
-				task_input_el.style.setProperty("text-decoration", "line-through");
-				task_input_el.style.setProperty("color", "#6B7280");
-			}
-			if (task_check.checked === false) {
-				task_input_el.style.setProperty("text-decoration", "none")
-				task_input_el.style.setProperty("color", "#EEE");
-			}
-		});
-
-		//------------------- Event for edit button functionality------------------//
-
-		task_edit_el.addEventListener('click', (e) => {
-			if (task_edit_el.innerText.toLowerCase() === "edit") {
-				task_edit_el.innerText = "Save";
-				task_input_el.removeAttribute("readonly");
-				task_input_el.focus();
-			} else {
-				task_edit_el.innerText = "Edit";
-				task_input_el.setAttribute("readonly", "readonly");
-			}
-		});
-
-		//--------------------- Event for delete button-------------------------------//
-
-		task_delete_el.addEventListener('click', (e) => {
-			list_el.removeChild(task_el);
-			localStorage.removeItem(task_input_el.value);
-		});
 	});
 });
