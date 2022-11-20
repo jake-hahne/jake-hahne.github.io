@@ -276,7 +276,7 @@ main h2 {
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem;
-    transition: transform .7s;
+    transition: transform 1.2s;
 }
 
 .task input[type="checkbox"] {

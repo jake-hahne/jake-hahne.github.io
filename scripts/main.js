@@ -68,9 +68,11 @@ window.addEventListener('load', () => {
 
 			list_el.appendChild(task_el);
 
-
+			// ------------------ Event for when task is checked off -----------------------//
 			task_check.addEventListener('click', (e) => {
 				if (task_check.checked) {
+					let check_off = new Audio("resources/pencil_checkmark.wav");
+					check_off.play();
 					task_input_el.style.setProperty("text-decoration", "line-through");
 					task_input_el.style.setProperty("color", "#6B7280");
 				}
@@ -96,8 +98,10 @@ window.addEventListener('load', () => {
 			//--------------------- Event for delete button-------------------------------//
 
 			task_delete_el.addEventListener('click', (e) => {
+				let whoosh = new Audio("resources/whoosh.wav");
+				whoosh.play();
 				task_el.classList.add("removed");
-				sleep(700).then(() => {
+				sleep(800).then(() => {
 					list_el.removeChild(task_el);
 					localStorage.removeItem(task_input_el.value);
 					location.reload();
