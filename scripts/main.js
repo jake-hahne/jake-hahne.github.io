@@ -2,10 +2,19 @@
  * Written by Jake Hahne for Web Dev semester project at UNK
  * Fall 2022
  */
+
 function sleep(ms) {
+	/**
+	 * This in an implementation of a function used to set a timer between processes of the
+	 * script, to be used with animations for example.
+	 */
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 window.addEventListener('load', () => {
+	/**
+	 * Everything below happens on page load action event.
+	 * @type {Element}
+	 */
 	const form = document.querySelector("#new-task-form");
 	const input = document.querySelector("#new-task-input");
 	const list_el = document.querySelector("#tasks");
