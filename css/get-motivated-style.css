@@ -23,7 +23,7 @@
 #quote-text, #source-text {
     color: var(--ice);
     font-family: "Alumni Sans", sans-serif;
-    font-size: larger;
+    font-size: 30px;
 }
 
 #source-text {
@@ -33,12 +33,13 @@
 #new-quote-button {
     border: 1px solid var(--blue2);
     background: var(--bluebase);
+    font-size: 28px;
     border-radius: .5em;
     padding: .5rem 1.5rem .5rem 1.5rem;
     color: var(--ice);
     transition: .3s ease-in-out;
     position: fixed;
-    margin-top: 12rem;
+    margin-top: 16rem;
     cursor: pointer;
 }
 

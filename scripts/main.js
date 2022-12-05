@@ -135,7 +135,7 @@ window.addEventListener('load', () => {
 		emptyMessageText.classList.add('text');
 		emptyMessageText.type = 'text';
 		emptyMessageText.value = "Nothing left, enjoy your free time! 😎";
-		emptyMessageText.style.fontSize = "26px";
+		emptyMessageText.style.fontSize = "40px";
 		emptyMessageText.style.color = "var(--orange)";
 		emptyMessageText.style.textAlign = "center";
 		emptyMessageText.setAttribute('readonly', 'readonly');
@@ -164,7 +164,7 @@ to reload all previously created tasks aside from the tasks that have been expli
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
 
-		location.reload();
+
 		const task = input.value;
 
 		//--------------------- Container for a 'task' --------------------------------//
@@ -215,5 +215,8 @@ to reload all previously created tasks aside from the tasks that have been expli
 		list_el.appendChild(task_el);
 
 		input.value = '';
+
+		sleep(3000);
+		location.reload();
 	});
 });
