@@ -1,5 +1,7 @@
 /**
  * Script used to generate and display random motivational quotes to the end user.
+ * @author Written by Jake Hahne for Web Dev semester project
+ * @date Fall 2022
  */
 document.addEventListener('DOMContentLoaded', function(){
     /**

@@ -1,6 +1,7 @@
-/**JS for my web application.
- * Written by Jake Hahne for Web Dev semester project at UNK
- * Fall 2022
+/**
+ * Main JS script for the to-do list portion of my web application.
+ * @author Written by Jake Hahne for Web Dev semester project at UNK
+ * @date Fall 2022
  */
 
 function sleep(ms) {
@@ -216,7 +217,7 @@ to reload all previously created tasks aside from the tasks that have been expli
 
 		input.value = '';
 
-		sleep(3000);
+		sleep(3000);  	// Wait 3 seconds before reloading
 		location.reload();
 	});
 });
