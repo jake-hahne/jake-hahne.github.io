@@ -2,6 +2,10 @@
  * Script used to generate and display random motivational quotes to the end user.
  */
 document.addEventListener('DOMContentLoaded', function(){
+    /**
+     * Event listener that displays a randomly selected quote to the end user when the page is loaded
+     * @type {HTMLElement}
+     */
     const quoteText = document.getElementById("quote-text");
     const sourceText = document.getElementById("source-text");
     const quotes = [
@@ -83,10 +87,19 @@ document.addEventListener('DOMContentLoaded', function(){
     let oldIndex;
 
     function getIndex(pool){
+        /**
+         * Function that chooses a random integer that will represent the index of chosen quote in
+         * the list of all quotes
+         */
         return Math.floor(Math.random() * pool.length);
     }
 
     function generateQuote() {
+        /**
+         * This function is used to grab the random quote from the pool of quotes, then display
+         * the quote and author to the end user
+         * @type {number} list index of chosen quote
+         */
         let index = getIndex(quotes);
         while (index === oldIndex) {
             index = getIndex(quotes);
