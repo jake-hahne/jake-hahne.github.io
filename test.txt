@@ -1,1 +1,1 @@
-Another test file, used to set up Git I/O. Hello World!!!!!
+Another test file, used to set up Git I/O. Hello World
