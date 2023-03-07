@@ -1,10 +1,937 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>This is a test of I/O</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jh/home_base</title>
+
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./assets/images/placeholder.png" type="image/x-icon">
+
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>HELLO WORLD!!!!!!!!</h1>
+
+<!-----------------------------------------------------------------
+                             MAIN
+------------------------------------------------------------------->
+
+<main>
+
+    <!-------------------
+           SIDEBAR
+    --------------------->
+
+    <aside class="sidebar" data-sidebar>
+
+        <div class="sidebar-info">
+
+            <figure class="avatar-box">
+                <img src="./assets/images/my-avatar.png" alt="jake_hahne_avatar" width="80">
+            </figure>
+
+            <div class="info-content">
+                <h1 class="name" title="Jake">Jake Hahne</h1>
+
+                <p class="title">Student Developer</p>
+            </div>
+
+            <button class="info_more-btn" data-sidebar-btn>
+                <span>Show Contact Info</span>
+
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+
+        </div>
+
+        <div class="sidebar-info_more">
+
+            <div class="separator"></div>
+
+            <ul class="contacts-list">
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
+
+                        <a href="mailto:hahnej@lopers.unk.edu" class="contact-link">hahnej@lopers.unk.edu</a>
+                    </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Phone</p>
+
+                        <a href="tel:+14023264919" class="contact-link">+1 (402) 326-4919</a>
+                    </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Born</p>
+
+                        <time datetime="1994-11-16">November 16, 1994</time>
+                    </div>
+
+                </li>
+
+                <li class="contact-item">
+
+                    <div class="icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Location</p>
+
+                        <address>Kearney, Nebraska, USA</address>
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <div class="separator"></div>
+
+            <ul class="social-list">
+
+                <li class="social-item">
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="social-item">
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li class="social-item">
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </aside>
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+        <!--
+          - #NAVBAR
+        -->
+
+        <nav class="navbar">
+
+            <ul class="navbar-list">
+
+                <li class="navbar-item">
+                    <button class="navbar-link  active" data-nav-link>About</button>
+                </li>
+
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Resume</button>
+                </li>
+
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Portfolio</button>
+                </li>
+
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Blog</button>
+                </li>
+
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Contact</button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+
+
+        <!--
+          - #ABOUT
+        -->
+
+        <article class="about  active" data-page="about">
+
+            <header>
+                <h2 class="h2 article-title">About me</h2>
+            </header>
+
+            <section class="about-text">
+                <p>
+                    [*placeholder* paragraph 1 todo]
+                </p>
+
+                <p>
+                    [*placeholder* paragraph 2 todo]
+                </p>
+            </section>
+
+
+            <!--
+              Stuff I Do
+            -->
+
+            <section class="stuff-i-do">
+
+                <h3 class="h3 stuff-title">What i'm doing</h3>
+
+                <ul class="stuff-list">
+
+                    <li class="stuff-item">
+
+                        <div class="stuff-ico-box">
+                            <img src="./assets/images/placeholder.png" alt="Web development icon" width="40">
+                        </div>
+
+                        <div class="stuff-content-box">
+                            <h4 class="h4 stuff-item-title">Web development</h4>
+
+                            <p class="stuff-item-title">
+                                I really enjoy web-based development and am fascinated by its ever changing nature
+                                and endless possibilities.
+                            </p>
+                        </div>
+
+                    </li>
+
+                    <li class="stuff-item">
+
+                        <div class="stuff-ico-box">
+                            <img src="./assets/images/placeholder.png
+                " alt="item icon" width="40">
+                        </div>
+
+                        <div class="stuff-content-box">
+                            <h4 class="h4 stuff-item-title">[placeholder]</h4>
+
+                            <p class="stuff-item-title">
+                                #todo placeholder text#
+                            </p>
+                        </div>
+
+                    </li>
+
+
+                    <li class="stuff-item">
+
+                        <div class="stuff-ico-box">
+                            <img src="./assets/images/placeholder.png" alt="item icon" width="40">
+                        </div>
+
+                        <div class="stuff-content-box">
+                            <h4 class="h4 stuff-item-title">[Placeholder]</h4>
+
+                            <p class="stuff-item-title">
+                                #todo placeholder text#
+                            </p>
+                        </div>
+
+                    </li>
+
+
+                    <li class="stuff-item">
+
+                        <div class="stuff-ico-box">
+                            <img src="./assets/images/placeholder.png" alt="item icon" width="40">
+                        </div>
+
+                        <div class="stuff-content-box">
+                            <h4 class="h4 stuff-item-title">[Placeholder title]</h4>
+
+                            <p class="stuff-item-title">
+                                #todo placeholder text#
+                            </p>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+
+
+
+
+        <!------------------------------------------------------------
+                                     #RESUME
+        -------------------------------------------------------------->
+
+        <article class="resume" data-page="resume">
+
+            <header>
+                <h2 class="h2 article-title">Resume</h2>
+            </header>
+
+            <!------------------------education----------------------->
+
+            <section class="timeline">
+
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">Education</h3>
+                </div>
+
+                <ol class="timeline-list">
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">University of Nebraska at Kearney - Computer Science, BS</h4>
+
+                        <span>2020 - Present</span>
+
+                        <p class="timeline-text">
+                            Currently a computer science student in my senior year. I have gained a wealth of knowledge
+                            throughout this program and have experience in many programming languages, web development
+                            languages and frameworks, database systems, and other fundamental aspects of computer science
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Lincoln Southwest High-school</h4>
+
+                        <span>2009 — 2013</span>
+
+                        <p class="timeline-text">
+                            Graduated from Southwest High-school in Lincoln, NE. Completed many advanced placement
+                            courses, was a member of National Honor Society, and ranked in the top 5% of my graduating
+                            class academically.
+                        </p>
+
+                    </li>
+
+                </ol>
+
+            </section>
+
+
+            <!-------------------work experience-------------------->
+
+            <section class="timeline">
+
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="briefcase-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">Work Experience</h3>
+                </div>
+
+                <ol class="timeline-list">
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Mathematics Subject Tutor</h4>
+
+                        <span>2020 — Present</span>
+
+                        <p class="timeline-text">
+                            • Provided tutoring services to students in math courses such as algebra, trigonometry, calculus, and statistics.
+                            <br>
+                            • Developed student confidence through positive reinforcement strategies.
+                            <br>
+                            • Supported students with helpful study habits and exam strategies.
+                            <br>
+                            • Used repetition and review to help students master challenging material.
+                            <br>
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Customer Service Representative</h4>
+
+                        <span>2021 — Present</span>
+
+                        <p class="timeline-text">
+                            • Provided primary customer support to internal and external customers.
+                            <br>
+                            • Actively listened to customers, handled concerns quickly and escalated major issues to
+                            supervisor.
+                            <br>
+                            • Sought ways to improve processes and services provided.
+                            <br>
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Carpenter</h4>
+
+                        <span>2014 — 2020</span>
+
+                        <p class="timeline-text">
+                            • Led a crew as we performed complete installations of sheds and detached garages for
+                            homeowners as well as business owners.
+                            <br>
+                            • Read and interpreted blueprints to follow specifications of projects.
+                            <br>
+                            • Demonstrated close attention to detail to verify quality and accuracy of work.
+                            <br>
+                        </p>
+
+                    </li>
+
+                </ol>
+
+            </section>
+
+            <!--------------------relevant skills chart--------------------->
+
+            <section class="skill">
+
+                <h3 class="h3 skills-title">Skills</h3>
+
+                <ul class="skills-list content-card">
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Web front-end</h5>
+                            <data value="80"></data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 80%;"></div>
+                        </div>
+
+                    </li>
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Web back-end</h5>
+                            <data value="50"></data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 50%;"></div>
+                        </div>
+
+                    </li>
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Design/Branding</h5>
+                            <data value="70"></data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 70%;"></div>
+                        </div>
+
+                    </li>
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Database Systems</h5>
+                            <data value="50"></data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 50%;"></div>
+                        </div>
+
+                    </li>
+
+                    <li class="skills-item">
+
+                        <div class="title-wrapper">
+                            <h5 class="h5">Willingness to learn</h5>
+                            <data value="100"></data>
+                        </div>
+
+                        <div class="skill-progress-bg">
+                            <div class="skill-progress-fill" style="width: 100%;"></div>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </section>
+            <br><br>
+
+            <!----------------------references------------------------->
+
+            <section class="timeline">
+
+                <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
+
+                    <h3 class="h3">References</h3>
+                </div>
+
+                <ol class="timeline-list">
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Sherri Harms, PhD</h4>
+
+                        <p class="timeline-text">
+                            Professor, Cyber Systems, University of Nebraska at Kearney
+                            <br>
+                            <a href="mailto:harmssk@unk.edu" class="contact-link" style="color: var(--pink-accent)">
+                                harmssk@unk.edu
+                            </a>
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">John Hastings, PhD</h4>
+
+                        <p class="timeline-text">
+                            Professor, Cyber Systems, University of Nebraska at Kearney
+                            <br>
+                            <a href="mailto:hastingsjd@unk.edu" class="contact-link" style="color: var(--pink-accent)">
+                                hastingsjd@unk.edu
+                            </a>
+                        </p>
+
+                    </li>
+
+                    <li class="timeline-item">
+
+                        <h4 class="h4 timeline-item-title">Barton Willis, PhD</h4>
+
+                        <p class="timeline-text">
+                            Professor, Mathematics & Statistics, University of Nebraska at Kearney
+                            <br>
+                            <a href="mailto:willisb@unk.edu" class="contact-link" style="color: var(--pink-accent)">
+                                willisb@unk.edu
+                            </a>
+                        </p>
+
+                    </li>
+
+                </ol>
+
+            </section>
+
+        </article>
+
+
+
+
+
+        <!--------------------------------------------------------
+                               #PORTFOLIO
+        ---------------------------------------------------------->
+
+        <article class="portfolio" data-page="portfolio">
+
+            <header>
+                <h2 class="h2 article-title">Portfolio</h2>
+            </header>
+
+            <section class="projects">
+
+                    <ul class="filter-list">
+
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>All</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>Web Development</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>Other</button>
+                        </li>
+
+                    </ul>
+
+                <div class="filter-select-box">
+
+                    <button class="filter-select" data-select>
+
+                        <div class="select-value" data-selecct-value>Select category</div>
+
+                        <div class="select-icon">
+                            <ion-icon name="chevron-down"></ion-icon>
+                        </div>
+
+                    </button>
+
+                    <ul class="select-list">
+
+                        <li class="select-item">
+                            <button data-select-item>All</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Web Development</button>
+                        </li>
+
+                        <li class="select-item">
+                            <button data-select-item>Other</button>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <ul class="project-list">
+
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/stuff-to-do-logo.png" alt="stuff-to-do">
+                            </figure>
+
+                            <h3 class="project-title">Stuff to Do</h3>
+
+                            <p class="project-category">
+                                Simple task manager web app I built as a class project. No longer hosted because
+                                I'm a broke college student 😂
+                            </p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="/assets/images/placeholder.png" alt="future-project" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">[future project goes here]</h3>
+
+                            <p class="project-category">TODO</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="web development">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/placeholder.png" alt="future-project" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">[future project goes here]</h3>
+
+                            <p class="project-category">TODO</p>
+
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="other">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/chess-project.png" alt="chess-bots" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Chess Bots 3000</h3>
+
+                            <p class="project-category">AI chess playing algorithms developed in Python that
+                            integrated with lichess.com through their API.</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item  active" data-filter-item data-category="other">
+                        <a href="#">
+
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="./assets/images/placeholder.png" alt="future-project" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">[future project goes here]</h3>
+
+                            <p class="project-category">TODO</p>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+
+
+
+
+        <!--
+          - #BLOG
+        -->
+
+        <article class="blog" data-page="blog">
+
+            <header>
+                <h2 class="h2 article-title">Blog</h2>
+            </header>
+
+            <section class="blog-posts">
+
+                <ul class="blog-posts-list">
+
+                    <li class="blog-post-item">
+                        <a href="#">
+
+                            <figure class="blog-banner-box">
+                                <img src="./assets/images/placeholder.png" alt="future-blog-post" loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+
+                                <div class="blog-meta">
+                                    <p class="blog-category">Category</p>
+
+                                    <span class="dot"></span>
+
+                                    <time datetime="2022-02-23">Jan 1, 3000</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">[Future Blog Post Title]</h3>
+
+                                <p class="blog-text">
+                                    Some text about future blog post.
+                                </p>
+
+                            </div>
+
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+
+                            <figure class="blog-banner-box">
+                                <img src="./assets/images/placeholder.png" alt="future-blog-post" loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+
+                                <div class="blog-meta">
+                                    <p class="blog-category">Category</p>
+
+                                    <span class="dot"></span>
+
+                                    <time datetime="2022-02-23">Jan 1, 3000</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">[Future Blog Post Title]</h3>
+
+                                <p class="blog-text">
+                                    Some text about future blog post.
+                                </p>
+
+                            </div>
+
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+
+                            <figure class="blog-banner-box">
+                                <img src="./assets/images/placeholder.png" alt="future-blog-post" loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+
+                                <div class="blog-meta">
+                                    <p class="blog-category">Category</p>
+
+                                    <span class="dot"></span>
+
+                                    <time datetime="2022-02-23">Jan 1, 3000</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">[Future Blog Post Title]</h3>
+
+                                <p class="blog-text">
+                                    Some text about future blog post.
+                                </p>
+
+                            </div>
+
+                        </a>
+                    </li>
+
+                    <li class="blog-post-item">
+                        <a href="#">
+
+                            <figure class="blog-banner-box">
+                                <img src="./assets/images/placeholder.png" alt="future-blog-post" loading="lazy">
+                            </figure>
+
+                            <div class="blog-content">
+
+                                <div class="blog-meta">
+                                    <p class="blog-category">Category</p>
+
+                                    <span class="dot"></span>
+
+                                    <time datetime="2022-02-23">Jan 1, 3000</time>
+                                </div>
+
+                                <h3 class="h3 blog-item-title">[Future Blog Post Title]</h3>
+
+                                <p class="blog-text">
+                                    Some text about future blog post.
+                                </p>
+
+                            </div>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+
+
+
+
+        <!---------------------------------------------------
+                             CONTACT ME
+        ----------------------------------------------------->
+
+        <article class="contact" data-page="contact">
+
+            <header>
+                <h2 class="h2 article-title">Contact Me</h2>
+            </header>
+
+            <section class="contact-form">
+
+                <h3 class="h3 form-title">Contact Form</h3>
+
+                <form action="#" class="form" data-form>
+
+                    <div class="input-wrapper">
+                        <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+                        <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                    </div>
+
+                    <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+                    <button class="form-btn" type="submit" disabled data-form-btn>
+                        <ion-icon name="paper-plane"></ion-icon>
+                        <span>Send Message</span>
+                    </button>
+
+                </form>
+
+            </section>
+
+        </article>
+
+    </div>
+
+</main>
+
+
+
+
+
+
+<!--
+  - custom js link
+-->
+<script src="./assets/js/script.js"></script>
+
+<!--
+  - ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
