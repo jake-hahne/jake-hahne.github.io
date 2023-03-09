@@ -8,60 +8,8 @@
 
 :root {
 
-    /**
-     * COLOR PALETTE (gradients and solid colors)
-     */
-
-    /* gradient */
-
-    --bg-gradient-dark: linear-gradient(
-            to bottom right,
-            var(--background),
-            #252633
-    );
-    --bg-gradient-blues-1: linear-gradient(
-            to bottom right,
-            var(--blue-accent) 0%,
-            var(--blue-slate) 50%
-    );
-    --bg-gradient-blues-2: linear-gradient(
-            165deg,
-            var(--card-background) 0%,
-            var(--background) 59.86%
-    ), hsl(240, 2%, 13%);
-    --border-gradient-grays: linear-gradient(
-            to bottom right,
-            var(--mid-gray),
-            #2b2d3c
-    );
-    --text-gradient-accent: linear-gradient(
-            to right,
-            #52e3fd,
-            var(--blue-accent)
-    );
 
 
-    /* dark mode palette [jh/home_base] */
-
-    --card-background: #44475A;
-    --background: #282A36;
-    --pink-accent: #FF79C5;
-    --blue-accent: #8BE9FD;
-    --blue-slate: #6272A4;
-    --border: #656578;
-    --white-1: #F8F8F2;
-    --white-2: #FAFAFAFF;
-    --light-gray: #D6D6D6FF;
-    --light-gray-70: #D6D6D6B2;
-    --mid-gray: #5E5E7B;
-    --contrast: #191A21;
-    --orange-fish: #F89580;
-    --error-red: #B84C4CFF;
-
-
-    /**
-     * FONT VARIABLES
-     */
 
     /* main font family */
     --ff-poppins: 'Poppins', sans-serif;
@@ -98,7 +46,69 @@
 
     --transition-1: 0.25s ease;
     --transition-2: 0.5s ease-in-out;
+    /**
+     * COLOR PALETTE (gradients and solid colors)
+     */
 
+    /* gradient */
+
+    --bg-gradient-dark: linear-gradient(
+            to bottom right,
+            var(--background),
+            #252633
+    );
+    --bg-gradient-blues-1: linear-gradient(
+            to bottom right,
+            var(--blue-accent) 0%,
+            var(--blue-slate) 50%
+    );
+    --bg-gradient-blues-2: linear-gradient(
+            165deg,
+            var(--card-background) 0%,
+            var(--background) 59.86%
+    ), hsl(240, 2%, 13%);
+    --border-gradient-grays: linear-gradient(
+            to bottom right,
+            var(--mid-gray),
+            #2b2d3c
+    );
+    --text-gradient-accent: linear-gradient(
+            to right,
+            #52e3fd,
+            var(--blue-accent)
+    );
+
+    /* dark mode palette [jh/home_base] */
+    --card-background: #44475A;
+    --background: #282A36;
+    --pink-accent: #FF79C5;
+    --blue-accent: #8BE9FD;
+    --blue-slate: #6272A4;
+    --border: #656578;
+    --white-1: #F8F8F2;
+    --white-2: #FAFAFAFF;
+    --light-gray: #D6D6D6FF;
+    --light-gray-70: #D6D6D6B2;
+    --mid-gray: #5E5E7B;
+    --contrast: #191A21;
+    --orange-fish: #F89580;
+    --error-red: #B84C4CFF;
+
+}
+
+/*------------- Light Mode!------------------*/
+[data-theme="light"] {
+    --card-background: #9E9E9E;
+    --background: #FFFEFC;
+    --pink-accent: #FF79C5;
+    --blue-accent: #8BE9FD;
+    --blue-slate: #6272A4;
+    --border: #656578;
+    --white-1: #161617; /*not actually white haha*/
+    --white-2: #070707; /*also not actually white haha*/
+    --light-gray: #DEDEDE;
+    --mid-gray: #5D5D5D;
+    --contrast: #333333;
 }
 
 
@@ -289,8 +299,7 @@ article.active {
 \*-----------------------------------*/
 
 main {
-    margin: 15px 12px;
-    margin-bottom: 75px;
+    margin: 15px 12px 75px;
     min-width: 259px;
 }
 
@@ -477,7 +486,65 @@ main {
 
 .navbar-link.active { color: var(--blue-accent); }
 
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
 
+.theme-switch-wrapper p {
+    color: var(--white-2);
+    margin-left: 10px;
+    font-size: var(--fs-7);
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--card-background);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: var(--transition-2);
+}
+
+.slider:before {
+    background-color: #FFF;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: var(--transition-2);
+    width: 26px;
+}
+
+input.checked + .slider {
+    background-color: #66bb6a;
+}
+
+input.checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%
+}
 
 
 
