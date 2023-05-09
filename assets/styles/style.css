@@ -125,6 +125,27 @@
 
 }
 
+/*####################################################################################################################
+              CSS TESTING SITE, UNSTABLE! (this is where I play around with new elements and style ideas)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.github-button {
+  background-color: var(--background);
+  color: var(--white-1);
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+}
+
+.github-button:hover {
+  background-color: #333;
+}
+
+.github-button i {
+  margin-right: 10px;
+}
+
+/*####################################################################################################################*/
 
 
 /*-----------------------------------*\
