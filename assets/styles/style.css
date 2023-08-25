@@ -489,7 +489,7 @@ main {
     left: 0;
     width: 100%;
     background: var(--bg-gradient-dark);
-    backdrop-filter: blur(10px);
+    /*backdrop-filter: blur(10px);*/
     border: 1px solid var(--mid-gray);
     border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow-1);
@@ -824,7 +824,8 @@ h4.stuff-item-title {
     border-radius: 8px;
 }
 
-.select-item button:hover { var(--contrast); }
+.select-item button:hover {
+    background: var(--contrast); }
 
 .project-list {
     display: grid;
