@@ -8,8 +8,9 @@
 
 :root {
 
-
-
+    /**
+     * FONTS
+     */
 
     /* main font family */
     --ff-poppins: 'Poppins', sans-serif;
@@ -46,6 +47,7 @@
 
     --transition-1: 0.25s ease;
     --transition-2: 0.5s ease-in-out;
+
     /**
      * COLOR PALETTE (gradients and solid colors)
      */
@@ -87,7 +89,7 @@
     --border: #656578;
     --white-1: #F8F8F2;
     --white-2: #FAFAFAFF;
-    --light-gray: #D6D6D6FF;
+    --light-gray: #e6e6e6;
     --light-gray-70: #D6D6D6B2;
     --mid-gray: #5E5E7B;
     --contrast: #191A21;
@@ -97,19 +99,19 @@
 }
 
 /*------------- Light Mode!------------------*/
-[data-theme="light"] {
-    --card-background: #67686f;
-    --background: #282A36;
-    --pink-accent: #f474b9;
-    --blue-accent: #4ae8ff;
-    --blue-slate: #6272A4;
-    --border: #2d3346;
+/* [data-theme="light"] {
+    --card-background: #606060;
+    --background: #FFFFFF;
+    --pink-accent: #F99FC9;
+    --blue-accent: #76D4F2;
+    --blue-slate: #8A9BB5; 
+    --border: #D1D1D6; 
     --white-1: #F8F8F2;
-    --white-2: #FAFAFAFF;
-    --light-gray: #f3f2f2;
-    --light-gray-70: rgba(231, 233, 239, 0.7);
-    --mid-gray: #535558;
-    --contrast: #d4d6d8;
+    --white-2: #FAFAFAFF; 
+    --light-gray: #e6e6e6; 
+    --light-gray-70: rgba(237, 237, 237, 0.7); 
+    --mid-gray: #7E7E8D; 
+    --contrast: #C2C4C7; 
 
     --bg-gradient-dark: linear-gradient(
             to bottom right,
@@ -121,9 +123,8 @@
     --shadow-2: 0 16px 30px #898B95;
     --shadow-3: 0 16px 40px #898B95;
     --shadow-4: 0 25px 50px #898B95;
-    --shadow-5: 0 24px 60px #898B95;
+    --shadow-5: 0 24px 60px #898B95; */
 
-}
 
 /*####################################################################################################################
               CSS TESTING SITE, UNSTABLE! (this is where I play around with new elements and style ideas)
@@ -407,16 +408,10 @@ main {
     position: absolute;
     inset: 1px;
     border-radius: inherit;
-    background: var(--background);
+    background: var(--bg-gradient-dark);
     transition: var(--transition-1);
     z-index: -1;
 }
-
-.info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-blues-1); }
-
-.info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-blues-2); }
 
 .info_more-btn span { display: none; }
 
@@ -494,7 +489,7 @@ main {
     left: 0;
     width: 100%;
     background: var(--bg-gradient-dark);
-    backdrop-filter: blur(10px);
+    /*backdrop-filter: blur(10px);*/
     border: 1px solid var(--mid-gray);
     border-radius: 12px 12px 0 0;
     box-shadow: var(--shadow-1);
@@ -520,6 +515,9 @@ main {
 .navbar-link:focus { color: var(--light-gray); }
 
 .navbar-link.active { color: var(--blue-accent); }
+
+
+/* Light mode toggle styles, may implement later
 
 .theme-switch-wrapper {
     display: flex;
@@ -580,8 +578,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%
-}
-
+} 
+*/
 
 
 /*-----------------------------------*\
@@ -826,7 +824,9 @@ h4.stuff-item-title {
     border-radius: 8px;
 }
 
-.select-item button:hover { var(--contrast); }
+.select-item button:hover {
+    background: var(--contrast); 
+}
 
 .project-list {
     display: grid;

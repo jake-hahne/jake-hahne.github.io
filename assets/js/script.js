@@ -96,6 +96,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
     });
 }
 
+/* Script for theme toggle switch, not currently in use
+ 
 // theme toggle switch variables
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
@@ -109,4 +111,5 @@ function switchTheme(e) {
     }
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+toggleSwitch.addEventListener('change', switchTheme, false); 
+*/
