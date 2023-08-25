@@ -2,9 +2,7 @@
   #style.css
 \*-----------------------------------*/
 
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+/*================================================ CUSTOM PROPERTIES ================================================*/
 
 :root {
 
@@ -149,9 +147,7 @@
 /*####################################################################################################################*/
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+/*================================================ RESET STYLES ================================================*/
 
 *, *::before, *::after {
     margin: 0;
@@ -193,11 +189,7 @@ body { background: var(--contrast); }
 
 
 
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+/*================================================ REUSED STYLE ================================================*/
 
 .sidebar,
 article {
@@ -327,12 +319,8 @@ article.active {
 }
 
 
+/*================================================ MAIN ================================================*/
 
-
-
-/*-----------------------------------*\
-  #MAIN [global]
-\*-----------------------------------*/
 
 main {
     margin: 15px 12px 75px;
@@ -341,11 +329,7 @@ main {
 
 
 
-
-
-/*-----------------------------------*\
-  #SIDEBAR
-\*-----------------------------------*/
+/*================================================ SIDEBAR ================================================*/
 
 .sidebar {
     margin-bottom: 15px;
@@ -478,10 +462,8 @@ main {
 
 
 
+/*================================================ NAVBAR ================================================*/
 
-/*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
 
 .navbar {
     position: fixed;
@@ -517,7 +499,8 @@ main {
 .navbar-link.active { color: var(--blue-accent); }
 
 
-/* Light mode toggle styles, may implement later
+/* ________________________________________________________________________________________________________________
+===================== UNUSED LIGHT MODE IMPLEMENTATION ============================================================
 
 .theme-switch-wrapper {
     display: flex;
@@ -578,13 +561,11 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%
-} 
+}
+_____________________________________________________________________________________________________________________ 
 */
 
-
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
+/*================================================ ABOUT ================================================*/
 
 .about .article-title { margin-bottom: 15px; }
 
@@ -599,9 +580,7 @@ input:checked + .slider:before {
 
 
 
-/**
- * STUFF I DO
- */
+/*----------------- Stuff I'm Into -------------------*/
 
 .stuff-i-do { margin-bottom: 35px; }
 
@@ -652,19 +631,14 @@ h4.stuff-item-title {
     color: white;
 }
 
+/*================================================ RESUME ================================================*/
 
-
-/*-----------------------------------*\
-  #RESUME
-\*-----------------------------------*/
 
 .article-title { margin-bottom: 30px; }
 
 
-/**
- * education and experience
- */
-
+/*------------------- Education & References ----------------------*/
+ 
 .timeline { margin-bottom: 30px; }
 
 .timeline .title-wrapper {
@@ -724,10 +698,8 @@ h4.stuff-item-title {
 }
 
 
-/**
- * skills
- */
 
+/*------------------Skills---------------------*/
 .skills-title { margin-bottom: 20px; }
 
 .skills-list { padding: 20px; }
@@ -763,11 +735,7 @@ h4.stuff-item-title {
 
 
 
-
-
-/*-----------------------------------*\
-  PORTFOLIO
-\*-----------------------------------*/
+/*================================================ PORTFOLIO ================================================*/
 
 .filter-list { display: none; }
 
@@ -923,11 +891,7 @@ h4.stuff-item-title {
 
 
 
-
-
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
+/*================================================ BLOG ================================================*/
 
 .blog-posts { margin-bottom: 10px; }
 
@@ -1010,102 +974,7 @@ h4.stuff-item-title {
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
-
-.contact-form { margin-bottom: 10px; }
-
-.form-title { margin-bottom: 20px; }
-
-.input-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    margin-bottom: 25px;
-}
-
-.form-input {
-    color: var(--white-2);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-400);
-    padding: 13px 20px;
-    border: 1px solid var(--mid-gray);
-    border-radius: 14px;
-    outline: none;
-}
-
-.form-input::placeholder {
-    font-weight: var(--fw-500);
-    color: var(--mid-gray);
-}
-
-.form-input:focus { border-color: var(--blue-accent); }
-
-textarea.form-input {
-    min-height: 100px;
-    height: 120px;
-    max-height: 200px;
-    resize: vertical;
-    margin-bottom: 25px;
-}
-
-textarea.form-input::-webkit-resizer { display: none; }
-
-
-.form-btn {
-    position: relative;
-    width: 100%;
-    background: var(--border-gradient-grays);
-    color: var(--blue-accent);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 20px;
-    border-radius: 14px;
-    font-size: var(--fs-6);
-    text-transform: capitalize;
-    box-shadow: var(--shadow-3);
-    z-index: 1;
-    transition: var(--transition-1);
-}
-
-.form-btn::before {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    background: var(--bg-gradient-dark);
-    border-radius: inherit;
-    z-index: -1;
-    transition: var(--transition-1);
-}
-
-.form-btn ion-icon { font-size: 16px; }
-
-.form-btn:hover { background: var(--bg-gradient-blues-1); }
-
-.form-btn:hover::before { background: var(--bg-gradient-blues-2); }
-
-.form-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-.form-btn:disabled:hover { background: var(--border-gradient-grays); }
-
-.form-btn:disabled:hover::before { background: var(--bg-gradient-dark); }
-
-
-
-
-
-/*-----------------------------------*\
-  #RESPONSIVE
-\*-----------------------------------*/
+/*================================================ RESPONSIVE STYLES ================================================*/
 
 /**
  * responsive larger than 450px screen
@@ -1120,7 +989,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     .clients-item { min-width: calc(33.33% - 10px); }
 
 
-
     /**
      * #PORTFOLIO, BLOG
      */
@@ -1129,8 +997,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     .blog-banner-box { height: auto; }
 
 }
-
-
 
 
 
@@ -1631,7 +1497,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     }
 
     .social-list { justify-content: center; }
-
 
 
     /**
