@@ -38,21 +38,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
     });
 }
-
-/* Script for theme toggle switch, not currently in use
- 
-// theme toggle switch variables
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-// function used to change light mode / dark mode theme
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', null);
-    }
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false); 
-*/

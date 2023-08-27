@@ -23,6 +23,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -439,11 +441,12 @@
 
                         <div class="title-wrapper">
                             <h5 class="h5">Web front-end</h5>
-                            <data value="75"></data>
+                            <data value="50"></data>
                         </div>
 
                         <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 50%;"></div>
+                            <div class="skill-progress-fill" style="--original-width: 50%;" 
+                            data-aos="fill-animation" data-aos-delay="50"></div>
                         </div>
 
                     </li>
@@ -452,11 +455,12 @@
 
                         <div class="title-wrapper">
                             <h5 class="h5">Web back-end</h5>
-                            <data value="40"></data>
+                            <data value="30"></data>
                         </div>
 
                         <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 30%;"></div>
+                            <div class="skill-progress-fill" style="--original-width: 30%;" 
+                            data-aos="fill-animation" data-aos-delay="50"></div>
                         </div>
 
                     </li>
@@ -465,11 +469,12 @@
 
                         <div class="title-wrapper">
                             <h5 class="h5">Design/Branding</h5>
-                            <data value="75"></data>
+                            <data value="50"></data>
                         </div>
 
                         <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 50%;"></div>
+                            <div class="skill-progress-fill" style="--original-width: 50%;" 
+                            data-aos="fill-animation" data-aos-delay="50"></div>
                         </div>
 
                     </li>
@@ -482,7 +487,8 @@
                         </div>
 
                         <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 40%;"></div>
+                            <div class="skill-progress-fill" style="--original-width: 40%;" 
+                            data-aos="fill-animation" data-aos-delay="50"></div>
                         </div>
 
                     </li>
@@ -495,7 +501,8 @@
                         </div>
 
                         <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 100%;"></div>
+                            <div class="skill-progress-fill" style="--original-width: 100%;" 
+                            data-aos="fill-animation" data-aos-delay="50"></div>
                         </div>
 
                     </li>
@@ -644,6 +651,11 @@
 -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    AOS.init({
+        duration: 2000
+    });
+</script>
 
 </body>
 

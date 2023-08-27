@@ -733,6 +733,15 @@ h4.stuff-item-title {
     border-radius: inherit;
 }
 
+[data-aos="fill-animation"] {
+    width: 0 !important;
+    transition: width 1s ease-out;
+}
+
+.aos-animate[data-aos="fill-animation"] {
+    width: var(--original-width) !important;
+}
+
 
 /*================================================ PORTFOLIO ================================================*/
 
