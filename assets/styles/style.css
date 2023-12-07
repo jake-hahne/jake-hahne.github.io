@@ -368,7 +368,7 @@ main {
     border-radius: 0 15px;
     border: 1px solid var(--mid-gray);
     font-size: 13px;
-    color: var(--blue-accent);
+    color: var(--white-1);
     background: var(--background);
     padding: 10px;
     transition: .2s ease;
@@ -376,7 +376,7 @@ main {
 }
 
 .info_more-btn:hover {
-    background: var(--background-80);
+    color: var(--blue-accent);
 }
 
 .info_more-btn span { display: none; }
