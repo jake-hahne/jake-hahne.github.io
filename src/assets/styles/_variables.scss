@@ -1,0 +1,49 @@
+// src/assets/styles/_variables.scss
+
+$background: #07080a;
+$card-background: #090A0C;
+$text-primary: #FFFFFF;
+$text-secondary: #8E8E93;
+
+$main-font: 'Inter', sans-serif;
+$mono-font: 'JetBrains Mono', monospace;
+
+$accent-blue: #048ee4;
+$accent-purple: #c115df;
+$accent-orange: #e07d04;
+$accent-green: #4bdb04;
+$accent-red: #F16372;
+
+$gradient-blue: linear-gradient(180deg, rgba(33, 37, 96, 0.7) 30%, rgba(14, 17, 56, 0.7) 88%);
+$gradient-red: linear-gradient(180deg, rgba(96, 33, 72, 0.7) 30%, rgba(59, 11, 34, 0.7) 88%);
+$gradient-green: linear-gradient(180deg, rgba(33, 96, 96, 0.7) 30%, rgba(14, 54, 55, 0.7) 88%);
+$gradient-teal: linear-gradient(180deg, rgba(33, 76, 96, 0.7) 30%, rgba(14, 38, 55, 0.7) 88%);
+$gradient-lavendar: linear-gradient(180deg, rgba(96, 33, 96, 0.7) 30%, rgba(55, 14, 55, 0.7) 88%);
+$gradient-orange: linear-gradient(180deg, rgba(96, 72, 33, 0.7) 30%, rgba(55, 34, 14, 0.7) 88%);
+$gradient-yellow: linear-gradient(180deg, rgb(73, 68, 21) 30%, rgba(182, 168, 48, 0.4) 88%);
+$gradient-pink: linear-gradient(180deg, rgba(96, 33, 33, 0.7) 30%, rgba(55, 14, 14, 0.7) 88%);
+$gradient-neutral: linear-gradient(180deg, rgba(31, 31, 31, 0.7) 30%, rgba(16, 16, 16, 0.7) 88%);
+
+$nav-background: linear-gradient(137deg, rgba(17, 18, 20, 0.75) 5%, rgba(12, 13, 15, 0.9) 76%);
+$nav-blur: 5px;
+
+$shadow:
+  rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset,
+  rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;
+
+$shadow-glow:
+  rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset,
+  rgba(30, 9, 99, 0.05) 0px 0px 20px 3px,
+  rgba(30, 9, 99, 0.06) 0px 0px 40px 20px,
+  rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset;
+
+$shadow-glow-hover:
+  rgba(255, 255, 255, 0.1) 0px 1px 0px 0px inset,
+  rgba(30, 9, 99, 0.05) 0px 0px 20px 3px,
+  rgba(30, 9, 99, 0.06) 0px 0px 40px 20px,
+  rgba(255, 255, 255, 0.06) 0px 0px 0px 1px inset,
+  rgba(30, 9, 99, 0.1) 0px 0px 20px 3px,
+  rgba(30, 9, 99, 0.1) 0px 0px 40px 20px,
+  rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+$container-width: 1200px;

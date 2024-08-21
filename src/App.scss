@@ -1,0 +1,36 @@
+@import '../src/assets/styles/variables';
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+
+  .appHeader {
+    background-color: $nav-background;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: $text-primary;
+  }
+
+  .appMain {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .appFooter {
+    background-color: $nav-background;
+    color: $text-primary;
+    padding: 10px;
+  }
+}
+
+
+
+
