@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.scss';
 import DevLicense from 'components/DevLicense/DevLicense';
+import Navigation from 'components/Navigation/Navigation';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="app">
       <header className="appHeader">
-        <h1>Hello World!</h1>
+        <Navigation />
       </header>
       <main className="appMain">
         <DevLicense />
@@ -18,6 +19,6 @@ function App() {
       </footer>
     </div>
   );
-}
+};
 
 export default App;
