@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { MdStar, MdCached } from 'react-icons/md';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import styles from './DevLicense.module.scss';
 import avatarImage from '../../assets/images/my-avatar.png';
 
@@ -34,13 +34,16 @@ const DevLicense: React.FC = () => {
               <div className={styles.contactInfo}>
                 <div className={styles.licenseNumberContainer}>
                   <span className={styles.licenseNumber}>
-                    <span className={styles.lineLabel}>Lic. No. </span>0x00010F2C
+                    <span className={styles.lineLabel}>Lic. No. </span>
+                    0x00010F2C
                   </span>
                   <span className={styles.issueDate}>
-                    <span className={styles.lineLabel}>Iss </span>05/17/2024
+                    <span className={styles.lineLabel}>Iss </span>
+                    05/17/2024
                   </span>
                   <span className={styles.expirationDate}>
-                    <span className={styles.lineLabel}>Exp </span>01/19/2038
+                    <span className={styles.lineLabel}>Exp </span>
+                    01/19/2038
                   </span>
                 </div>
                 <div className={styles.nameContainer}>
@@ -77,10 +80,20 @@ const DevLicense: React.FC = () => {
                 <i className="devicon-git-plain"></i>
               </div>
               <div className={styles.socialLinks}>
-                <a href="https://github.com/jake-hahne" target="_blank" rel="noopener noreferrer" className={styles.socialLinkGithub}>
+                <a
+                  href="https://github.com/jake-hahne"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLinkGithub}
+                >
                   <BsGithub />
                 </a>
-                <a href="https://www.linkedin.com/in/jake-hahne/" target="_blank" rel="noopener noreferrer" className={styles.socialLinkLinkedin}>
+                <a
+                  href="https://www.linkedin.com/in/jake-hahne/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLinkLinkedin}
+                >
                   <BsLinkedin />
                 </a>
               </div>

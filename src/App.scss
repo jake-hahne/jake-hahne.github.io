@@ -1,10 +1,10 @@
-@import '../src/assets/styles/variables';
+@import "../src/assets/styles/variables";
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 
   .appHeader {
     background-color: $nav-background;
@@ -30,7 +30,3 @@
     padding: 10px;
   }
 }
-
-
-
-
